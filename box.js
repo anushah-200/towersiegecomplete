@@ -21,11 +21,11 @@ class Box{
         imageMode(CENTER);
         if(this.body.speed<3)
         image(this.image, 0, 0, this.width, this.height);
-        else
+        else{
         World.remove(world,this.body)
         this.visibility=this.visibility-5
          tint(255,this.visibility)
-         image(this.image, 0, 0, this.width, this.height);
+         image(this.image, 0, 0, this.width, this.height);}
         
         pop();
       }
