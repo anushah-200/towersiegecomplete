@@ -27,6 +27,18 @@ class Box{
          tint(255,this.visibility)
          image(this.image, 0, 0, this.width, this.height);}
         
-        pop();
-      }
-}
+       
+        
+        
+
+      
+        
+         pop();
+         }}
+         score()
+         {
+          push()
+         if(this.Visiblity<0 && this.Visiblity>=-1005){
+         score++
+         pop()
+         }}
