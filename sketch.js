@@ -1,3 +1,4 @@
+
 const Engine = Matter.Engine;
 const World= Matter.World;
 const Bodies = Matter.Bodies;
@@ -5,7 +6,7 @@ const Constraint = Matter.Constraint;
 
 var engine, world;
 
-
+var score=0
 function setup(){
     var canvas = createCanvas(700,700);
     engine = Engine.create();
@@ -49,17 +50,20 @@ function setup(){
    box25 = new Box(265, 360,30,30);
     polygon=new Polygon(100,300,50,50)
     
-    slingshot = new SlingShot(polygon.body,{x:100, y:300});
+    slingshot = new SlingShot(polygon.body,{x:100, y:200});
 }
 
 function draw(){
     background("black");
+    text("score = " +score, 400,50)
     Engine.update(engine);
     strokeWeight(4);
     ground1.display();
     ground2.display();
     box1.display();
+    box1.score()
     box2.display();
+    box2.score()
     box3.display();
     box4.display();
     box5.display();
@@ -83,6 +87,30 @@ function draw(){
     box23.display();
     box24.display();
     box25.display();
+
+    box3.score();
+    box4.score();
+    box5.score();
+    box6.score();
+    box7.score();
+    box8.score();
+    box9.score();
+    box10.score();
+    box11.score();
+    box12.score();
+    box13.score();
+    box14.score();
+    box15.score();
+    box16.score();
+    box17.score();
+    box18.score();
+    box19.score();
+    box20.score();
+    box21.score();
+    box22.score();
+    box23.score();
+    box24.score();
+    box25.score();
     polygon.display ()  
     slingshot.display();    
 }
@@ -95,3 +123,5 @@ function mouseDragged(){
 function mouseReleased(){
     slingshot.fly();
 }
+ 
+  
